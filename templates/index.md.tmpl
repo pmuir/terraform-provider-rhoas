@@ -17,4 +17,7 @@ The RHOAS terraform provider includes resources to interact with Red Hat OpenShi
 
 {{tffile "examples/resources/rhoas_kafka/resource.tf"}}
 
+Provider requires offline token from Red Hat cloud account (https://cloud.redhat.com/openshift/token). 
+It can be configured using `OFFLINE_TOKEN` environment variable or optional `offline_token` parameter
+
 {{ .SchemaMarkdown | trimspace }}
