@@ -78,8 +78,6 @@ github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46 h1:lsxEuwrXEAo
 github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46/go.mod h1:3wb06e3pkSAbeQ52E9H9iFoQsEEwGN64994WTCIhntQ=
 github.com/Nerzal/gocloak/v7 v7.11.0 h1:ab2E55lIMCaUfn47uEHiFhvvMHw+yDHL6Pb+GrM+x04=
 github.com/Nerzal/gocloak/v7 v7.11.0/go.mod h1:8fu/dbbIRa1FmLEAOVReZ8PKfbnsl2DwEk6U0giK3KI=
-github.com/Nerzal/gocloak/v8 v8.2.0 h1:dSbJRAXXAEYmwC+4RPXfzDEw6dgUOtiPBbG1C6rwhtE=
-github.com/Nerzal/gocloak/v8 v8.2.0/go.mod h1:Zzuv9uk+6drd8VrFT0ihxvIicMv7+umQKtKfnp5jCAs=
 github.com/Netflix/go-expect v0.0.0-20180615182759-c93bf25de8e8 h1:xzYJEypr/85nBpB11F9br+3HUrpgb+fcm5iADzXXYEw=
 github.com/Netflix/go-expect v0.0.0-20180615182759-c93bf25de8e8/go.mod h1:oX5x61PbNXchhh0oikYAH+4Pcfw5LKv21+Jnpr6r6Pc=
 github.com/OneOfOne/xxhash v1.2.2 h1:KMrpdQIwFcEqXDklaen+P1axHaj9BSKzvpUUfnHldSE=
