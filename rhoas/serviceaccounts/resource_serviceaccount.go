@@ -2,57 +2,58 @@ package serviceaccounts
 
 import (
 	"context"
+	"io/ioutil"
+	"log"
+	"time"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/pkg/errors"
 	kasclient "github.com/redhat-developer/app-services-cli/pkg/api/kas/client"
-	"io/ioutil"
-	"log"
 	"redhat.com/rhoas/rhoas-terraform-provider/m/rhoas/cli/connection"
 	"redhat.com/rhoas/rhoas-terraform-provider/m/rhoas/utils"
-	"time"
 )
 
 func ResourceServiceAccount() *schema.Resource {
 	return &schema.Resource{
-		Description: "`rhoas_service_account` manages a service account in Red Hat OpenShift Streams for Apache Kafka.",
+		Description:   "`rhoas_service_account` manages a service account in Red Hat OpenShift Streams for Apache Kafka.",
 		CreateContext: serviceAccountCreate,
 		ReadContext:   serviceAccountRead,
 		DeleteContext: serviceAccountDelete,
 		Schema: map[string]*schema.Schema{
-			"service_account": &schema.Schema{
+			"service_account": {
 				Type:     schema.TypeList,
 				MaxItems: 1,
 				Required: true,
 				ForceNew: true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
-						"description": &schema.Schema{
+						"description": {
 							Description: "A description of the service account",
-							Type:     schema.TypeString,
-							Optional: true,
-							Default:  "",
-							ForceNew: true,
+							Type:        schema.TypeString,
+							Optional:    true,
+							Default:     "",
+							ForceNew:    true,
 						},
-						"name": &schema.Schema{
+						"name": {
 							Description: "The name of the service account",
-							Type:     schema.TypeString,
-							Required: true,
-							ForceNew: true,
+							Type:        schema.TypeString,
+							Required:    true,
+							ForceNew:    true,
 						},
-						"client_id": &schema.Schema{
+						"client_id": {
 							Description: "The client id associated with the service account",
-							Type:     schema.TypeString,
-							Computed: true,
+							Type:        schema.TypeString,
+							Computed:    true,
 						},
-						"owner": &schema.Schema{
-							Type:     schema.TypeString,
-							Computed: true,
+						"owner": {
+							Type:        schema.TypeString,
+							Computed:    true,
 							Description: "The username of the Red Hat account that owns the service account",
 						},
-						"client_secret": &schema.Schema{
-							Type:     schema.TypeString,
-							Computed: true,
+						"client_secret": {
+							Type:        schema.TypeString,
+							Computed:    true,
 							Description: "The client secret associated with the service account. It must be stored by the client as the server will not return it after creation",
 						},
 					},
