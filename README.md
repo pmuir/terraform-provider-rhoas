@@ -1,6 +1,6 @@
 # RHOAS Terraform Provider
 
-NOTE: Repository have been moved to https://github.com/redhat-developer/app-services-teraform-provider
+> NOTE: Repository have been moved to https://github.com/redhat-developer/app-services-teraform-provider
 
 A terraform provider for Red Hat OpenShift Application Services.
 
